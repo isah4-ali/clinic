@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Online Rezervasiya</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+    <h2>Rezervasiya Formu</h2>
+    <form id="appointmentForm" action="payment.html" method="GET">
+
+        <label for="clinic">Klinika seçin:</label>
+        <select id="clinic" name="clinic" required></select>
+
+        <label for="sector">Sektor seçin:</label>
+        <select id="sector" name="sector" required></select>
+
+        <label for="doctor">Həkim seçin:</label>
+        <select id="doctor" name="doctor" required></select>
+
+        <label for="appointmentDate">Tarix:</label>
+        <input type="date" id="appointmentDate" name="appointmentDate" required>
+
+        <label for="time">Vaxt seçin:</label>
+        <select id="time" name="time" required></select>
+
+        <label for="purpose">Məqsəd:</label>
+        <select id="purpose" name="purpose" required>
+            <option value="Müayinə">Müayinə</option>
+            <option value="Müalicə">Müalicə</option>
+            <option value="Konsultasiya">Konsultasiya</option>
+        </select>
+
+        <label for="firstName">Ad:</label>
+        <input type="text" id="firstName" name="firstName" required />
+
+        <label for="lastName">Soyad:</label>
+        <input type="text" id="lastName" name="lastName" required />
+
+        <label for="fatherName">Ata adı:</label>
+        <input type="text" id="fatherName" name="fatherName" required />
+
+        <label for="gender">Cins:</label>
+        <select id="gender" name="gender" required>
+            <option value="Kişi">Kişi</option>
+            <option value="Qadın">Qadın</option>
+        </select>
+
+        <label for="age">Yaş:</label>
+        <input type="number" id="age" name="age" min="1" required />
+
+        <label for="mobile">Mobil nömrə:</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="+994501234567" pattern="\+994[0-9]{9}" required />
+
+        <button type="submit">Ödənişə keç</button>
+    </form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
