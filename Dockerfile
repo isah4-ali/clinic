@@ -19,7 +19,7 @@ FROM openjdk:17-jdk-alpine
 WORKDIR /app
 
 # Build nəticəsində yaranan jar-ı köçür
-COPY --from=build /app/target/clinic-booking-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /app/target/clinic-0.0.1-SNAPSHOT.jar app.jar
 
 # App-ı işə sal
 ENTRYPOINT ["java", "-jar", "app.jar"]
