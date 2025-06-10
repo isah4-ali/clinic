@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ödəniş Məlumatları</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="payment-container">
+    <h2>Ödəniş Məlumatları</h2>
+    <form id="paymentForm" novalidate>
+        <label for="cardNumber">Kart nömrəsi:</label>
+        <input type="tel" id="cardNumber" name="cardNumber" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" required />
+
+        <label for="expiryDate">Son istifadə tarixi (MM/YY):</label>
+        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5" required />
+
+        <label for="cvv">CVV:</label>
+        <input type="tel" id="cvv" name="cvv" placeholder="XXX" maxlength="3" required />
+
+        <button type="submit">Ödənişi Tamamla</button>
+        <div id="errorMessage"></div>
+    </form>
+</div>
+
+<!-- Ayrı JS faylı daxil edilir -->
+<script src="payment.js"></script>
+</body>
+</html>
