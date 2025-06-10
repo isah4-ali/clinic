@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     populateTimes();
 
-    fetch("http://localhost:8080/clinic-booking-ms/clinics")
+    fetch("/clinic-booking-ms/clinics")
         .then(res => res.json())
         .then(data => {
             clinicSelect.innerHTML = `<option disabled selected>Seçin</option>`;
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sectorSelect.addEventListener("change", () => {
         const sectorId = sectorSelect.value;
         console.log("Seçilmiş sektor id:", sectorId);
-        fetch("http://localhost:8080/clinic-booking-ms/doctors/" + sectorId)
+        fetch("/clinic-booking-ms/doctors/" + sectorId)
             .then(res => {
                 console.log("Doktorlar status:", res.status);
                 return res.json();

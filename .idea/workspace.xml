@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bf7953e0-6f7d-46f1-8b1a-1db0328255d7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/payment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,11 +25,11 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ClinicApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="clinic" />

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8" />
+    <title>Ödəniş Formu</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 10px; }
+        label, input { display: block; margin: 10px 0; }
+        button { padding: 8px 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+<h3>Ödəniş Formu</h3>
+
+<form id="paymentForm">
+    <label for="cardNumber">Kart Nömrəsi:</label>
+    <input type="text" id="cardNumber" name="cardNumber" required minlength="16" maxlength="16" pattern="\d{16}" placeholder="1234 5678 9012 3456" />
+
+    <label for="expiry">Son istifadə tarixi (MM/YY):</label>
+    <input type="text" id="expiry" name="expiry" required pattern="^(0[1-9]|1[0-2])\/\d{2}$" placeholder="MM/YY" />
+
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" name="cvv" required minlength="3" maxlength="4" pattern="\d{3,4}" />
+
+    <button type="submit">Ödə</button>
+</form>
+
+<script>
+    document.getElementById('paymentForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Sadə təsdiq, real ödəniş prosesi üçün backend çağırışı olmalıdır
+        const cardNumber = e.target.cardNumber.value;
+        const expiry = e.target.expiry.value;
+        const cvv = e.target.cvv.value;
+
+        // Sadə validasiya
+        if(cardNumber.length === 16 && expiry.match(/^(0[1-9]|1[0-2])\/\d{2}$/) && (cvv.length === 3 || cvv.length ===4)) {
+            // Ödəniş uğurlu oldu kimi qəbul edək
+            parent.postMessage({status: 'success'}, '*');
+        } else {
+            // Uğursuz ödəniş
+            parent.postMessage({status: 'failed'}, '*');
+        }
+    });
+</script>
+</body>
+</html>

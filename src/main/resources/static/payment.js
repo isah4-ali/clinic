@@ -78,7 +78,7 @@ form.addEventListener('submit', async (e) => {
     }
 
     try {
-        const response = await fetch("http://localhost:8080/clinic-booking-ms/api/appointments", {
+        const response = await fetch("/clinic-booking-ms/api/appointments", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
