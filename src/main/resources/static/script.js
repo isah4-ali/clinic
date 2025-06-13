@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     clinicSelect.addEventListener("change", () => {
         const clinicId = clinicSelect.value;
         console.log("Seçilmiş klinika id:", clinicId);
-        fetch("http://localhost:8080/clinic-booking-ms/sectors/" + clinicId)
+        fetch("/clinic-booking-ms/sectors/" + clinicId)
             .then(res => {
                 console.log("Sektorlar status:", res.status);
                 return res.json();
